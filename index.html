@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>Morse Code translator</title>
+          <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+  </head>
+
+  <body>
+    <!--- CSS -->
+    <style> 
+        body {
+    background-color: #1a1a1a;
+    }
+        .title {
+
+        font-size: 72px;
+        background: linear-gradient(42deg,rgb(5, 201, 201) , rgb(192, 3, 192));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 2px, 2px, 5px, 1px, green;
+        animation: rotateGradient 60s linear infinite;
+    }
+
+    
+        .openfont {
+            font-family:"Open Sans";
+        }
+        .center {
+            display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+        }
+        .shadow {
+            box-shadow: 0px 0px 5px 5px linear-gradient(to right, red, maroon);
+            
+        }
+        .classy_button::before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            right: 4px;
+            top: 4px;
+            bottom: 4px;
+            border-radius: 4px;
+            background-color: white;
+            z-index: -1;
+
+            
+
+        }
+
+        .btn::after {
+            content: attr(data);
+            font-size: 16px;
+            background: linear-gradient(to left, red, maroon);
+            -webkit-background-clip: text;
+            color: transparent;
+        
+        }
+        .classy_button {
+            padding: 20px 60px;
+            margin-top:25px;
+            border: none;
+            outline: none;
+            position: relative;
+            border-radius: 5px;
+            background: linear-gradient(to right, red, maroon);
+            cursor: pointer;
+            z-index: 1;
+            font-size:medium;
+        }  
+
+        .text {
+            margin-top: 20px;
+            font-size:large;
+            color:red
+        } 
+
+
+
+
+
+    </style>
+<!-- HTML BODY-->
+    <h1 class="title openfont center">Morse Code Translator</h1>
+    <input class= "openfont center" type="text" id="english" placeholder="English here:" />
+    <button class="classy_button openfont center shadow" py-click="translate_english">Translate</button>
+    <div class="text center openfont" id="output"></div> <!-- output-->
+    <script type="py" src="./main.py" config="./pyscript.json"></script>
+  </body>
+</html>
