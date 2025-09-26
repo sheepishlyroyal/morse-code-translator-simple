@@ -30,7 +30,6 @@ class MorseTranslator:
                 morse.append(char)
         return ' '.join(morse)
 
-# Create an instance of the translator
 translator = MorseTranslator()
 
 def translate_english(event):
